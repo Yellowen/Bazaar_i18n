@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-feature "Translations", js: true do
+RSpec.feature "Translations", :js do
   stub_authorization!
 
   given(:language) { Spree.t(:'i18n.this_file_language', locale: 'pt-BR') }
@@ -24,7 +22,24 @@ feature "Translations", js: true do
         click_on "Update"
 
         change_locale
-        expect(page).to have_content("Geleia de perola")
+        expect(page).to have_text_like 'Geleia de perola'
+      end
+    end
+
+    context "product properties" do
+      given!(:product_property) { create(:product_property, value: "red") }
+
+      scenario "displays translated value on frontend" do
+        visit spree.admin_product_product_properties_path(product_property.product)
+        within_row(1) { click_icon :translate }
+
+        within("#attr_fields .value.pt-BR.odd") { fill_in_name "vermelho" }
+        click_on "Update"
+
+        change_locale
+        visit spree.admin_product_product_properties_path(product_property.product)
+
+        expect(page).to have_text_like 'vermelho'
       end
     end
 
@@ -33,7 +48,7 @@ feature "Translations", js: true do
 
       scenario "displays translated name on frontend" do
         visit spree.admin_option_types_path
-        find('.fa-flag').click
+        within_row(1) { click_icon :translate }
 
         within("#attr_fields .name.en.odd") { fill_in_name "shirt sizes" }
         within("#attr_list") { click_on "Presentation" }
@@ -43,7 +58,7 @@ feature "Translations", js: true do
 
         change_locale
         visit spree.admin_option_types_path
-        expect(page).to have_content("tamanho")
+        expect(page).to have_text_like 'tamanho'
       end
 
       # Regression test for issue #354
@@ -54,8 +69,8 @@ feature "Translations", js: true do
         fill_in "Presentation", with: "Sizes"
         click_button "Create"
 
-        page.should have_content "has been successfully created"
-        page.should have_content "OPTION VALUES"
+        expect(page).to have_text_like 'has been successfully created'
+        expect(page).to have_text_like 'Option Values'
       end
     end
 
@@ -64,7 +79,7 @@ feature "Translations", js: true do
 
       scenario "displays translated name on frontend" do
         visit spree.edit_admin_option_type_path(option_type)
-        find('.fa-flag').click
+        within_row(1) { click_icon :translate }
 
         within("#attr_fields .name.en.odd") { fill_in_name "big" }
         within("#attr_list") { click_on "Presentation" }
@@ -78,13 +93,12 @@ feature "Translations", js: true do
       end
     end
 
-
     context "properties" do
       given!(:property) { create(:property) }
 
       scenario "displays translated name on frontend" do
         visit spree.admin_properties_path
-        find('.fa-flag').click
+        within_row(1) { click_icon :translate }
 
         within("#attr_fields .name.pt-BR.odd") { fill_in_name "Modelo" }
         within("#attr_list") { click_on "Presentation" }
@@ -95,7 +109,7 @@ feature "Translations", js: true do
         change_locale
         visit spree.admin_properties_path
 
-        expect(page).to have_content("Modelo")
+        expect(page).to have_text_like 'Modelo'
       end
     end
   end
@@ -105,7 +119,7 @@ feature "Translations", js: true do
 
     scenario "saves translated attributes properly" do
       visit spree.admin_promotions_path
-      find('.fa-flag').click
+      within_row(1) { click_icon :translate }
 
       within("#attr_fields .name.en.odd") { fill_in_name "All free" }
       within("#attr_fields .name.pt-BR.odd") { fill_in_name "Salve salve" }
@@ -113,7 +127,14 @@ feature "Translations", js: true do
 
       change_locale
       visit spree.admin_promotions_path
-      expect(page).to have_content("Salve salve")
+      expect(page).to have_text_like 'Salve salve'
+    end
+
+    it "render edit route properly" do
+      visit spree.admin_promotions_path
+      within_row(1) { click_icon :translate }
+      click_on 'Cancel'
+      expect(page).to have_css('.content-header')
     end
   end
 
@@ -122,7 +143,7 @@ feature "Translations", js: true do
 
     scenario "display translated name on frontend" do
       visit spree.admin_taxonomies_path
-      find('.fa-flag').click
+      within_row(1) { click_icon :translate }
 
       within("#attr_fields .name.en.odd") { fill_in_name "Guitars" }
       within("#attr_fields .name.pt-BR.odd") { fill_in_name "Guitarras" }
@@ -130,37 +151,34 @@ feature "Translations", js: true do
 
       change_locale
       visit spree.root_path
-      expect(page).to have_content('GUITARRAS')
+      expect(page).to have_text_like 'Guitarras'
     end
   end
 
-  context "taxons", focus: true do
-    given!(:taxon)    { create(:taxon) }
-    given!(:taxonomy) { taxon.taxonomy }
-    given!(:product) do
-      product = create(:product)
-      product.taxons << taxon
-    end
+  context 'taxons' do
+    given!(:taxonomy) { create(:taxonomy) }
+    given!(:taxon) { create(:taxon, taxonomy: taxonomy, parent_id: taxonomy.root.id) }
 
     scenario "display translated name on frontend" do
-      visit spree.edit_admin_taxonomy_taxon_path(taxonomy.id, taxon.id)
-      find('.fa-flag').click
+      visit spree.admin_translations_path('taxons', taxon.id)
 
       within("#attr_fields .name.en.odd") { fill_in_name "Acoustic" }
       within("#attr_fields .name.pt-BR.odd") { fill_in_name "Acusticas" }
       click_on "Update"
 
-      visit spree.edit_admin_taxonomy_taxon_path(taxonomy.id, taxon.id)
-      find('.fa-flag').click
-
+      visit spree.admin_translations_path('taxons', taxon.id)
+      
       # ensure we're not duplicating translated records on database
       expect {
         click_on "Update"
       }.not_to change { taxon.translations.count }
 
+      # ensure taxon is in root or it will not be visible
+      expect(taxonomy.root.children.count).to be(1)
+
       change_locale
       visit spree.root_path
-      expect(page).to have_content('Acusticas')
+      expect(page).to have_text_like 'Acusticas'
     end
   end
 
@@ -204,10 +222,10 @@ feature "Translations", js: true do
       click_on "Update"
 
       visit spree.product_path 'en_link'
-      expect(page).to have_content('Product')
+      expect(page).to have_text_like 'Product'
 
       visit spree.product_path 'de_link'
-      expect(page).to have_content('Product')
+      expect(page).to have_text_like 'Product'
     end
   end
 

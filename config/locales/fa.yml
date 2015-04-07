@@ -3,36 +3,43 @@ fa:
   activerecord:
     attributes:
       spree/address:
-        address1: Address
-        address2: Address (contd.)
-        city: City
-        country: Country
-        firstname: First Name
-        lastname: Last Name
-        phone: Phone
-        state: State
-        zipcode: Zip Code
+        address1: "آدرس"
+        address2: "ادامه آدرس"
+        city: "شهر"
+        country: "کشور"
+        firstname: "نام"
+        lastname: "نام‌خانوادگی"
+        phone: "تلفن"
+        state: "استان"
+        zipcode: "کد پستی"
+      spree/calculator/tiered_flat_rate:
+        preferred_base_amount:
+        preferred_tiers:
+      spree/calculator/tiered_percent:
+        preferred_base_percent:
+        preferred_tiers:
       spree/country:
         iso: ISO
         iso3: ISO3
         iso_name: ISO Name
-        name: Name
+        name: "نام"
         numcode: ISO Code
       spree/credit_card:
         base:
-        cc_type: Type
-        month: Month
-        number: Number
-        verification_value: Verification Value
-        year: Year
+        cc_type: "نوع"
+        month: "ماه"
+        name:
+        number: "عدد"
+        verification_value:
+        year: "سال"
       spree/inventory_unit:
-        state: State
+        state: "استان"
       spree/line_item:
-        price: Price
-        quantity: Quantity
+        price: "قیمت"
+        quantity: "مقدار"
       spree/option_type:
-        name: Name
-        presentation: Presentation
+        name: "نام"
+        presentation: "نمایش"
       spree/order:
         checkout_complete:
         completed_at: پایان یافته در
@@ -47,26 +54,27 @@ fa:
         special_instructions: دستورالعمل ویژه
         state: وضعیت
         total: مجموع
+
       spree/order/bill_address:
-        address1: Billing address street
-        city: Billing address city
-        firstname: Billing address first name
-        lastname: Billing address last name
-        phone: Billing address phone
-        state: Billing address state
-        zipcode: Billing address zipcode
+        address1:
+        city:
+        firstname:
+        lastname:
+        phone:
+        state:
+        zipcode:
       spree/order/ship_address:
-        address1: Shipping address street
-        city: Shipping address city
-        firstname: Shipping address first name
-        lastname: Shipping address last name
-        phone: Shipping address phone
-        state: Shipping address state
-        zipcode: Shipping address zipcode
+        address1:
+        city:
+        firstname:
+        lastname:
+        phone:
+        state:
+        zipcode:
       spree/payment:
         amount:
       spree/payment_method:
-        name: Name
+        name:
       spree/product:
         available_on: Available On
         cost_currency:
@@ -78,44 +86,61 @@ fa:
         shipping_category: Shipping Category
         tax_category: Tax Category
       spree/promotion:
-        advertise: Advertise
-        code: Code
-        description: Description
-        event_name: Event Name
-        expires_at: Expires At
-        name: Name
-        path: Path
-        starts_at: Starts At
-        usage_limit: Usage Limit
+        advertise:
+        code:
+        description:
+        event_name:
+        expires_at:
+        name: "نام"
+        path: "مسیر"
+        starts_at:
+        usage_limit:
+      spree/promotion_category:
+        name:
       spree/property:
-        name: Name
-        presentation: Presentation
+        name: "نام"
+        presentation: "نمایش"
       spree/prototype:
-        name: Name
+        name: "نام"
       spree/return_authorization:
-        amount: Amount
+        amount:
       spree/role:
-        name: Name
+        name: "نام"
       spree/state:
-        abbr: Abbreviation
-        name: Name
+        abbr:
+        name: "نام"
+      spree/state_change:
+        state_changes:
+        state_from:
+        state_to:
+        timestamp:
+        type:
+        updated:
+        user:
+      spree/store:
+        mail_from_address:
+        meta_description:
+        meta_keywords:
+        name:
+        seo_title:
+        url:
       spree/tax_category:
-        description: Description
-        name: Name
+        description: "توضیحات"
+        name: "نام"
       spree/tax_rate:
-        amount: Rate
-        included_in_price: Included in Price
-        show_rate_in_label: Show rate in label
+        amount:
+        included_in_price:
+        show_rate_in_label:
       spree/taxon:
-        name: Name
-        permalink: Permalink
-        position: Position
+        name:
+        permalink:
+        position:
       spree/taxonomy:
-        name: Name
+        name: "نام"
       spree/user:
-        email: Email
-        password: Password
-        password_confirmation: Password Confirmation
+        email: "ایمیل"
+        password: "رمز‌عبور"
+        password_confirmation: "تایید رمز‌عبور"
       spree/variant:
         cost_currency:
         cost_price: Cost Price
@@ -126,30 +151,69 @@ fa:
         weight: Weight
         width: Width
       spree/zone:
-        description: Description
-        name: Name
+        description: "توضیحات"
+        name: "نام"
     errors:
       models:
+        spree/calculator/tiered_flat_rate:
+          attributes:
+            base:
+              keys_should_be_positive_number:
+            preferred_tiers:
+              should_be_hash:
+        spree/calculator/tiered_percent:
+          attributes:
+            base:
+              keys_should_be_positive_number:
+              values_should_be_percent:
+            preferred_tiers:
+              should_be_hash:
+        spree/classification:
+          attributes:
+            taxon_id:
+              already_linked:
         spree/credit_card:
           attributes:
             base:
               card_expired:
+              expiry_invalid:
+        spree/line_item:
+          attributes:
+            currency:
+              must_match_order_currency:
+        spree/refund:
+          attributes:
+            amount:
+              greater_than_allowed:
+        spree/reimbursement:
+          attributes:
+            base:
+              return_items_order_id_does_not_match:
+        spree/return_item:
+          attributes:
+            inventory_unit:
+              other_completed_return_item_exists:
+            reimbursement:
+              cannot_be_associated_unless_accepted:
+        spree/store:
+          attributes:
+            base:
+              cannot_destroy_default_store:
     models:
       spree/address:
-        one: Address
-        other: Addresses
+        one: "آدرس"
+        other: "آدرس‌ها"
       spree/country:
-        one: Country
-        other: Countries
+        one: "کشور"
+        other: "کشورها"
       spree/credit_card:
-        one: Credit Card
-        other: Credit Cards
+        one: "کارت اعتباری"
+        other: "کارت‌های اعتباری"
+      spree/customer_return:
       spree/inventory_unit:
-        one: Inventory Unit
-        other: Inventory Units
       spree/line_item:
-        one: Line Item
-        other: Line Items
+      spree/option_type:
+      spree/option_value:
       spree/order:
         one: سفارش
         other: سفارشات
@@ -158,24 +222,22 @@ fa:
         other: Payments
       spree/payment_method:
       spree/product:
-        one: Product
-        other: Products
+        one: "محصول"
+        other: "محصول‌ها"
       spree/promotion: فروش ویژه
       spree/property:
-        one: Property
-        other: Properties
+        one: "خصوصیت"
+        other: "خصوصیات"
       spree/prototype:
         one: نمونه آزمایشی
         other: نمنونه های آزمایشی
+      spree/refund_reason:
+      spree/reimbursement:
+      spree/reimbursement_type:
       spree/return_authorization:
-        one: Return Authorization
-        other: Return Authorizations
+      spree/return_authorization_reason:
       spree/role:
-        one: Roles
-        other: Roles
       spree/shipment:
-        one: Shipment
-        other: Shipments
       spree/shipping_category:
         one: Shipping Category
         other: Shipping Categories
@@ -184,23 +246,18 @@ fa:
         one: State
         other: States
       spree/stock_location:
+
       spree/stock_transfer:
       spree/tax_category:
-        one: Tax Category
-        other: Tax Categories
       spree/tax_rate:
-        one: Tax Rate
-        other: Tax Rates
       spree/taxon:
-        one: Taxon
-        other: Taxons
       spree/taxonomy:
         one: Taxonomy
         other: Taxonomies
       spree/tracker:
       spree/user:
-        one: User
-        other: Users
+        one: "کاربر"
+        other: "کاربرها"
       spree/variant:
         one: Variant
         other: Variants
@@ -252,10 +309,14 @@ fa:
       not_locked:
       not_saved:
   spree:
-    abbreviation: مخفف
-    account: حساب
-    account_updated: حساب شما بروزرسانی شد!
-    action: حرکت
+    abbreviation: "مخفف"
+    accept:
+    acceptance_errors:
+    acceptance_status:
+    accepted:
+    account: "حساب"
+    account_updated: "حساب شما بروزرسانی شد!"
+    action: "حرکت"
     actions:
       cancel: لغو
       continue:
@@ -294,12 +355,6 @@ fa:
     adjustment_total: تعدیل کل
     adjustments: تعدیلات
     admin:
-      mail_methods:
-        send_testmail: Send Testmail
-        testmail:
-          delivery_error: Testmail delivery error
-          delivery_success: Testmail sent successfully
-          error: ! 'Testmail error: %{e}'
       tab:
         configuration: تنظیمات
         orders: سفارشات
@@ -503,26 +558,26 @@ fa:
     error: ایراد
     errors:
       messages:
-        could_not_create_taxon: امکان ایجاد نوع دسته بندی وجود ندارد
-        no_payment_methods_available: No payment methods are configured for this environment
-        no_shipping_methods_available: ارسال برای ناحیه انتخاب شده مقدور نمی باشد، لطفا منطقه ی دیگری را انتخاب کنید
+        could_not_create_taxon: "امکان ایجاد نوع دسته‌بندی وجود ندارد"
+        no_payment_methods_available:
+        no_shipping_methods_available: "ارسال برای ناحیه انتخاب شده مقدور نمی‌باشد، لطفا منطقه‌ی دیگری را انتخاب کنید"
     errors_prohibited_this_record_from_being_saved:
-      one: یک ایراد مانع از انجام ذخیره سازی است
-      other: ! '%{count} ایراد مانع از انجام ذخیره سازی است'
-    event: رویداد
+      one: "یک ایراد مانع از انجام ذخیره‌سازی است"
+      other: "%{count} ایراد مانع از انجام ذخیره‌سازی است"
+    event: "رویداد"
     events:
       spree:
         cart:
-          add: Add to cart
+          add: "اضافه به سبد خرید"
         checkout:
-          coupon_code_added: Coupon code added
+          coupon_code_added: "کد کوپن اضافه شد"
         content:
-          visited: Visit static content page
+          visited:
         order:
-          contents_changed: Order contents changed
-        page_view: Static page viewed
+          contents_changed: "محتویات سفارش تغییر یافت"
+        page_view:
         user:
-          signup: User signup
+          signup: "ثبت‌نام کاربر"
     exceptions:
       count_on_hand_setter:
     expiration: انقضاء
@@ -803,10 +858,11 @@ fa:
     product_not_available_in_this_currency:
     product_properties: ویژگی های محصول
     product_rule:
-      choose_products: محصولات را انتخاب کنید
-      label: Order must contain %{select} of these products
-      match_all: همه
-      match_any: حداقل یکی
+      choose_products: "محصول‌ها را انتخاب کنید"
+      label:
+      match_all: "همه"
+      match_any: "حداقل یکی"
+      match_none:
       product_source:
         group: از گروه محصول
         manual: انتخاب دستی
@@ -815,36 +871,48 @@ fa:
     promotion_action: فروش ویژه فعال
     promotion_action_types:
       create_adjustment:
-        description: Creates a promotion credit adjustment on the order
-        name: Create adjustment
+        description:
+        name:
+      create_item_adjustments:
+        description:
+        name:
       create_line_items:
-        description: Populates the cart with the specified quantity of variant
-        name: Create line items
-      give_store_credit:
-        description: Gives the user store credit of the amount specified
-        name: Give store credit
-    promotion_actions: Actions
+        description:
+        name:
+      free_shipping:
+        description:
+        name:
+    promotion_actions:
     promotion_form:
       match_policies:
-        all: Match any of these rules
-        any: Match all of these rules
-    promotion_rule: Promotion Rule
+        all:
+        any:
+    promotion_rule:
     promotion_rule_types:
       first_order:
-        description: Must be the customer's first order
-        name: First order
+        description:
+        name:
       item_total:
-        description: Order total meets these criteria
-        name: Item total
+        description:
+        name:
       landing_page:
-        description: Customer must have visited the specified page
-        name: Landing Page
+        description:
+        name:
+      one_use_per_user:
+        description:
+        name:
+      option_value:
+        description:
+        name:
       product:
-        description: Order includes specified product(s)
-        name: Product(s)
+        description:
+        name:
+      taxon:
+        description:
+        name:
       user:
-        description: Available only to the specified users
-        name: User
+        description:
+        name:
       user_logged_in:
         description: Available only to logged in users
         name: User Logged In
@@ -1053,8 +1121,8 @@ fa:
     use_s3: Use Amazon S3 For Images
     user: کاربر
     user_rule:
-      choose_users: انتخاب کاربران
-    users: کاربران
+      choose_users: "انتخاب کاربرها"
+    users: "کاربرها"
     validation:
       cannot_be_less_than_shipped_units: cannot be less than the number of shipped units.
       cannot_destory_line_item_as_inventory_units_have_shipped: Cannot destory line item as some inventory units have shipped.
