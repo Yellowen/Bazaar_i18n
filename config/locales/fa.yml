@@ -120,8 +120,8 @@ fa:
         user:
       spree/store:
         mail_from_address:
-        meta_description:
-        meta_keywords:
+        meta_description: توضیحات کلیدی برای موتورهای جستجو
+        meta_keywords: کلمه کلیدی برای موتورهای جستجو
         name:
         seo_title:
         url:
@@ -412,19 +412,19 @@ fa:
     back: برگشت
     back_end: Back End
     back_to_adjustments_list: Back To Adjustments List
-    back_to_images_list: Back To Images List
+    back_to_images_list: بازگشت به لیست تصاویر
     back_to_option_types_list:
     back_to_orders_list:
     back_to_payment_methods_list: Back To Payment Methods List
-    back_to_payments_list: Back To Payments List
-    back_to_products_list: Back To Products List
+    back_to_payments_list: بازگشت به لیست پرداخت‌
+    back_to_products_list: بازگشت به لیست محصولات
     back_to_promotions_list: بازگشت به لیست محصولات
-    back_to_properties_list: Back To Products List
-    back_to_prototypes_list: Back To Prototypes List
-    back_to_reports_list: Back To Reports List
-    back_to_shipping_categories: Back To Shipping Categories
-    back_to_shipping_methods_list: Back To Shipping Methods List
-    back_to_states_list: Back To States List
+    back_to_properties_list: بازگشت به لیست خواص 
+    back_to_prototypes_list: بازگشت به لیست نمونه‌های اولیه
+    back_to_reports_list: بازگشت به لیست گزارشات
+    back_to_shipping_categories: بازگشت به لیست گزوه‌بندی‌های ارسال
+    back_to_shipping_methods_list: بازگشت به لیست انواع ارسال
+    back_to_states_list: بازگشت به لیست وضعیت‌ها
     back_to_stock_locations_list:
     back_to_stock_movements_list:
     back_to_stock_transfers_list:
@@ -541,6 +541,7 @@ fa:
     description: توضیح
     destination:
     destroy: پاک کردن
+    details: جزئیات
     discount_amount: مقدار تخفیف
     dismiss_banner: No. Thanks! I'm not interested, do not display this message again
     display: نمایش
@@ -701,8 +702,8 @@ fa:
       all: همه
       none: هیچی
     max_items: حداکثر اقلام
-    meta_description: Meta Description
-    meta_keywords: Meta Keywords
+    meta_description: توضیحات کلیدی برای موتورهای جستجو
+    meta_keywords: کلمات کلیدی برای موتورهای جستجو
     metadata: Metadata
     minimal_amount: حداقل مقدار
     month: ماه
@@ -1059,6 +1060,7 @@ fa:
     smtp_send_all_emails_as_from_following_address: تمام نامه ها را از آدرس ذیل ارسال کن
     smtp_send_copy_to_this_addresses: Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas.
     smtp_username: SMTP Username
+    slug: شعار
     source:
     special_instructions: ساختارهای خاص
     split:
@@ -1072,6 +1074,7 @@ fa:
     states: ایالات یا استان ها
     states_required:
     status: وضعیت
+    stock: موجودی
     stock_location: مکان انبار
     stock_location_info: توضیحات انبار
     stock_locations: مکان انبارها
@@ -1094,7 +1097,8 @@ fa:
     successfully_updated: ! '%{resource} با موفقیت به روز رسانی شد!'
     tax: مالیات
     tax_categories: دسته بندی های مالیات
-    tax_category: دسته بندی مالیات
+    tax_category: دسته‌بندی مالیات
+    tax_code: کد مالیات
     tax_rate_amount_explanation:
     tax_rates: نرخ مالیات
     tax_settings: تنظیمات مالیات
@@ -1131,7 +1135,7 @@ fa:
     transfer_to_location:
     tree: Tree
     type: نوع
-    type_to_search: Type to search
+    type_to_search: جسنجو بر اساس نوع
     unable_to_connect_to_gateway: اتصال به درگاه مقدور نیست
     under_price: Under %{price}
     unlock:
@@ -1155,9 +1159,9 @@ fa:
       must_be_int: باید به صورت عدد صحیح وارد شوند
       must_be_non_negative: must be a non-negative value
     value: مقدار
-    variant: Variant
+    variant: تفاوت‌
     variant_placeholder:
-    variants: Variants
+    variants: تفاوت‌ها
     version: نسخه
     void: Void
     weight: وزن
