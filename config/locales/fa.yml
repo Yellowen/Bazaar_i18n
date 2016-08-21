@@ -8,10 +8,10 @@ fa:
         city: "شهر"
         country: "کشور"
         firstname: "نام"
-        lastname: "نام‌خانوادگی"
+        lastname: "نام و نام خانوادگی"
         phone: "تلفن"
         state: "استان"
-        zipcode: "کد پستی"
+        zipcode: "کدپستی"
       spree/calculator/tiered_flat_rate:
         preferred_base_amount:
         preferred_tiers:
@@ -25,10 +25,10 @@ fa:
         name: "نام"
         numcode: ISO Code
       spree/credit_card:
-        base:
+        base: "پایه"
         cc_type: "نوع"
         month: "ماه"
-        name:
+        name: "نام"
         number: "عدد"
         verification_value:
         year: "سال"
@@ -41,7 +41,7 @@ fa:
         name: "نام"
         presentation: "نمایش"
       spree/order:
-        checkout_complete:
+        checkout_complete: بازدید نهایی
         completed_at: پایان یافته در
         coupon_code: کد کوپن
         created_at: ساخته شده در
@@ -56,47 +56,48 @@ fa:
         total: مجموع
 
       spree/order/bill_address:
-        address1:
-        city:
-        firstname:
-        lastname:
-        phone:
-        state:
-        zipcode:
+        address1: آدرس ۱
+        city: شهر
+        firstname: نام
+        lastname: نام خانوادگی
+        phone:  تلقن
+        state: استان
+        zipcode: کدپستی
       spree/order/ship_address:
-        address1:
-        city:
-        firstname:
-        lastname:
-        phone:
-        state:
-        zipcode:
+        address1: آدرس ۱
+        city: شهر
+        firstname: نام
+        lastname: نام خانوادگی
+        phone: تلفن
+        state: استان
+        zipcode: کدپستی
       spree/payment:
-        amount:
+        amount: مقدار
       spree/payment_method:
-        name:
+        name: نام
       spree/product:
-        available_on: Available On
-        cost_currency:
-        cost_price: Cost Price
-        description: Description
-        master_price: Master Price
-        name: Name
-        on_hand: On Hand
-        shipping_category: Shipping Category
-        tax_category: Tax Category
+        available_on: فعال در
+        cost_currency: هزینه ارزی
+        cost_price: هزینه قیمت
+        description: توضیحات
+        master_price: قیمت اصلی
+        name: نام
+        on_hand: در دسترس
+        shipping_category: دسته بندی ارسال
+      tax_category: دسته بندی مالیات
       spree/promotion:
-        advertise:
-        code:
-        description:
-        event_name:
-        expires_at:
+        advertise: تبلیغات
+        code: کد
+        description: توضیحات
+        event_name: نام رخداد
+        expires_at: تمام می شود در
         name: "نام"
         path: "مسیر"
-        starts_at:
-        usage_limit:
+        starts_at: شروع می شود در
+        usage_limit: محدودیت استفاد
       spree/promotion_category:
-        name:
+        name: نامه
+        code: کد
       spree/property:
         name: "نام"
         presentation: "نمایش"
@@ -107,49 +108,49 @@ fa:
       spree/role:
         name: "نام"
       spree/state:
-        abbr:
+        abbr: اختصاری
         name: "نام"
       spree/state_change:
-        state_changes:
-        state_from:
-        state_to:
-        timestamp:
-        type:
-        updated:
-        user:
+        state_changes: تغییر وضعیت
+        state_from: فرم وضعیت
+        state_to: وضعیت به
+        timestamp: برچسب زمان
+        type: گونه
+        updated: به روز رسانی
+        user: کاربر
       spree/store:
-        mail_from_address:
-        meta_description:
-        meta_keywords:
-        name:
-        seo_title:
-        url:
+        mail_from_address: فرم آدرس ایمیل
+        meta_description: توضیحات تکمیلی
+        meta_keywords: کلیدواژه تکمیلی
+        name: نام
+        seo_title: تیتر seo
+        url: تارنما
       spree/tax_category:
         description: "توضیحات"
-        name: "نام"
-      spree/tax_rate:
-        amount:
-        included_in_price:
+        name: نام
+        spree/tax_rate: مقدار مالیات
+        amount: مقدار
+        included_in_price: اضافه شده به قیمت
         show_rate_in_label:
       spree/taxon:
-        name:
+        name: نام
         permalink:
-        position:
+        position: موقعیت
       spree/taxonomy:
         name: "نام"
       spree/user:
-        email: "ایمیل"
-        password: "رمز‌عبور"
-        password_confirmation: "تایید رمز‌عبور"
-      spree/variant:
-        cost_currency:
-        cost_price: Cost Price
-        depth: Depth
-        height: Height
-        price: Price
+        email: ایمیل
+        password: رمز عبور
+        password_confirmation: تکرار رمز عبور
+        spree/variant: متغیر
+        cost_currency: نوع ارز
+        cost_price: بهای قیمت
+        depth: عمق
+        height: ارتفاع
+        price: قیمت
         sku: کد کالا
-        weight: Weight
-        width: Width
+        weight: وزن
+        width: عرض
       spree/zone:
         description: "توضیحات"
         name: "نام"
@@ -218,13 +219,13 @@ fa:
         one: سفارش
         other: سفارشات
       spree/payment:
-        one: Payment
-        other: Payments
-      spree/payment_method:
+        one: پرداخت
+        other: کلیه پرداخت ها
+      spree/payment_method: روش پرداخت
       spree/product:
         one: "محصول"
-        other: "محصول‌ها"
-      spree/promotion: فروش ویژه
+        other: سفارش
+        spree/promotion: فروش ویژه
       spree/property:
         one: "خصوصیت"
         other: "خصوصیات"
@@ -236,34 +237,34 @@ fa:
       spree/reimbursement_type:
       spree/return_authorization:
       spree/return_authorization_reason:
-      spree/role:
-      spree/shipment:
+      spree/role: نقش
+      spree/shipment: محموله
       spree/shipping_category:
-        one: Shipping Category
-        other: Shipping Categories
+        one: دسته بندی ارسال
+        other: دسته بندی های ارسال
       spree/shipping_method:
       spree/state:
-        one: State
-        other: States
+        one: استان
+        other: استان ها
       spree/stock_location:
 
-      spree/stock_transfer:
-      spree/tax_category:
-      spree/tax_rate:
-      spree/taxon:
+      spree/stock_transfer: انتقال انبار
+      spree/tax_category: دسته بندی مالیات
+      spree/tax_rate: مقدار مالیات
+      spree/taxon: طبقه
       spree/taxonomy:
-        one: Taxonomy
-        other: Taxonomies
+        one: دسته بندی
+        other: دسته بندی ها
       spree/tracker:
       spree/user:
         one: "کاربر"
         other: "کاربرها"
       spree/variant:
-        one: Variant
-        other: Variants
+        one: متغیر
+        other: متغیرها
       spree/zone:
-        one: Zone
-        other: Zones
+        one: محدوده
+        other: محدوده ها
   devise:
     confirmations:
       confirmed:
@@ -322,36 +323,36 @@ fa:
       continue:
       create: ایجاد
       destroy: پاک کردن
-      edit:
+      edit: ویرابش
       list: لیست
       listing: لیست کردن
       new: جدید
-      save:
+      save: ذخیره
       update: بروز رسانی
-    activate: Activate
+    activate: فعال سازی
     active: فعال
     add: افزودن
     add_action_of_type: Add action of type
     add_country: افزودن کشور
     add_new_header: Add New Header
     add_new_style: Add New Style
-    add_one:
+    add_one: اضافه کردن
     add_option_value: افزودن مقدار
     add_product: افزودن محصول
     add_product_properties: افزودن ویژگی های محصول
     add_rule_of_type: افزودن قانون نوع
     add_state: افزودن ایالت یا استان
-    add_stock:
-    add_stock_management:
+    add_stock: اضافه کردن انبار
+    add_stock_management: افزودن مدیریت انبار
     add_to_cart: افزودن به سبد خرید
     add_variant:
     additional_item: قیمت آیتم اضافه شده
-    address1:
-    address2:
-    adjustment: تعدیل
-    adjustment_amount:
-    adjustment_successfully_closed:
-    adjustment_successfully_opened:
+    address1: آدرس ۱ول
+    address2:  آدرس دوم
+    adjustment: کاهش
+    adjustment_amount: کاهش مقدار
+    adjustment_successfully_closed: کاهش با موفقیت بسته شد
+    adjustment_successfully_opened: کاهش با موفقیت باز شد
     adjustment_total: تعدیل کل
     adjustments: تعدیلات
     admin:
@@ -402,24 +403,24 @@ fa:
     back_to_option_types_list:
     back_to_orders_list:
     back_to_payment_methods_list: Back To Payment Methods List
-    back_to_payments_list: Back To Payments List
-    back_to_products_list: Back To Products List
-    back_to_promotions_list: Back To Promotions List
-    back_to_properties_list: Back To Products List
-    back_to_prototypes_list: Back To Prototypes List
-    back_to_reports_list: Back To Reports List
-    back_to_shipping_categories: Back To Shipping Categories
-    back_to_shipping_methods_list: Back To Shipping Methods List
-    back_to_states_list: Back To States List
-    back_to_stock_locations_list:
-    back_to_stock_movements_list:
-    back_to_stock_transfers_list:
+    back_to_payments_list: بازگشت به لیست پرداخت ها
+    back_to_products_list: بازگشت به لیست محصولات
+    back_to_promotions_list: بازگشت به لیست فروش ویژه
+    back_to_properties_list: بازگشت به لیست خواص
+    back_to_prototypes_list: بازگشت به لیست نمونه اولیه
+    back_to_reports_list: بازگشت به لیست گزارشات
+    back_to_shipping_categories: بازگشت به دسته بندی های ارسال
+    back_to_shipping_methods_list: بازگشت به لیست روش های ارسال
+    back_to_states_list: بازگشت به لیست استان ها
+    back_to_stock_locations_list: بازگشت به لیست مکان
+    back_to_stock_movements_list: بازگشت به لیست تحرکات انبار
+    back_to_stock_transfers_list: بازگشت به لیست انتقالات انبار
     back_to_store: بازگشت به فروشگاه
-    back_to_tax_categories_list: Back To Tax Categories List
-    back_to_taxonomies_list: Back To Taxonomies List
-    back_to_trackers_list: Back To Trackers List
-    back_to_users_list:
-    back_to_zones_list: Back To Zones List
+    back_to_tax_categories_list: بازگشت به لیست دسته بندی های مالیات
+    back_to_taxonomies_list: بازگشت به لیست طبقه بندی ها
+    back_to_trackers_list: بازگشت به لیست رهگیری ها
+    back_to_users_list: بازگشت به لیست کاربران
+    back_to_zones_list: بازگشت به لیست منطقه ها
     backorderable:
     backorders_allowed:
     balance_due: Balance Due
@@ -466,10 +467,10 @@ fa:
     could_not_connect_to_jirafe:
     could_not_create_stock_movement:
     count_on_hand:
-    countries:
+    countries: کشورها
     country: کشور
     country_based: بر حسب کشور
-    country_name:
+    country_name:  نام کشور
     coupon: کوپن
     coupon_code: کد کوپن
     coupon_code_already_applied:
@@ -481,21 +482,21 @@ fa:
     coupon_code_not_found:
     create: ایجاد
     create_a_new_account: ایجاد یک حساب جدید
-    created_at:
+    created_at: ایجاد شده در
     credit: اعتبار
     credit_card: کارت اعتباری
-    credit_cards: Credit Cards
+    credit_cards: کارت های اعتباری
     credit_owed: اعتبار مقروض
-    currency: Currency
+    currency: ارز
     currency_decimal_mark:
-    currency_settings: Currency Settings
+    currency_settings: تنظیمات ارزی
     currency_symbol_position: Put currency symbol before or after dollar amount?
     currency_thousands_separator:
     current: جاری
     current_promotion_usage:
     customer: مشتری
     customer_details: جزئیات مشتری
-    customer_details_updated: The customer's details have been updated.
+    customer_details_updated: مشخصات کاربر به روز رسانی شد.
     customer_search: جستجوی مشتری
     cut: Cut
     dash:
@@ -509,9 +510,9 @@ fa:
         token:
       jirafe_settings_updated:
     date:
-    date_completed: Date Completed
+    date_completed: تاریخ کامل شد
     date_picker:
-      first_day:
+      first_day: روز اول
       format:
       js_format:
     date_range: محدوده ی زمانی
@@ -528,21 +529,21 @@ fa:
     destination:
     destroy: پاک کردن
     discount_amount: مقدار تخفیف
-    dismiss_banner: No. Thanks! I'm not interested, do not display this message again
+    dismiss_banner: با تشکر من علاقمند به این موضوع نیستم دیگر برای من نمایش نده
     display: نمایش
-    display_currency: Display currency
+    display_currency: نمایش ارز
     edit: ویرایش
     editing_option_type: ویرایش نوع انتخاب
     editing_payment_method: ویرایش متد پرداخت
     editing_product: ویرایش محصول
-    editing_promotion: Editing Promotion
+    editing_promotion: ویرایش شرایط ویژه
     editing_property: ویرایش اموال
     editing_prototype: ویرایش نمونه اولیه
     editing_shipping_category: ویرایش دسته بندی ارسال
     editing_shipping_method: ویرایش روش ارسال
     editing_state: ویرایش ایالت یا استان
-    editing_stock_location:
-    editing_stock_movement:
+    editing_stock_location: ویرایش مکان انبار
+    editing_stock_movement: ویرایش تحرک انبار
     editing_tax_category: ویرایش دسته بندی مالیات
     editing_tax_rate: ویرایش نرخ مالیات
     editing_tracker: ویرایش ردگیر
@@ -552,7 +553,7 @@ fa:
     empty: خالی
     empty_cart: سبد خرید خالی شود
     enable_mail_delivery: فعال سازی تحویل نامه
-    end:
+    end: پایان
     ending_in: Ending in
     environment: محیط
     error: ایراد
@@ -680,7 +681,7 @@ fa:
     mail_method_settings:
     mail_methods: متدهای نامه
     make_refund: Make refund
-    master_price: Master قیمت
+    master_price: قیمت اصلی
     match_choices:
       all: All
       none: None
@@ -694,7 +695,7 @@ fa:
     move_stock_between_locations:
     my_account: حساب من
     my_orders: سفارش های من
-    name: نامه
+    name: نام
     name_or_sku: نام یا کد کالا
     new: جدید
     new_adjustment: تعدیل جدید
@@ -706,7 +707,8 @@ fa:
     new_payment: پرداخت جدید
     new_payment_method: متد پرداخت جدید
     new_product: محصول جدید
-    new_promotion: New Promotion
+    new_promotion: فروش ویژه جدید
+    new_promotion_category: دسته بندی جدید فروش ویژه
     new_property: ویژگی جدید
     new_prototype: نمونه اولیه جدید
     new_return_authorization: New Return Authorization
@@ -715,11 +717,11 @@ fa:
     new_state: ایالت جدید
     new_stock_location:
     new_stock_movement:
-    new_stock_transfer:
+    new_stock_transfer: انتقال انبار جدید
     new_tax_category: دسته بندی مالیات جدید
     new_tax_rate: نرخ مالیات جدید
-    new_taxon: New Taxon
-    new_taxonomy: New Taxonomy
+    new_taxon: دسته جدید
+    new_taxonomy: دسته بندی جدید
     new_tracker: ردگیر جدید
     new_user: کاربر جدید
     new_variant: New Variant
@@ -730,10 +732,10 @@ fa:
     no_payment_methods_found:
     no_pending_payments:
     no_products_found: هیچ محصولی یافت نشد
-    no_promotions_found:
-    no_resource_found:
+    no_promotions_found: هیچ فروش ویژه ای یافت نشد
+    no_resource_found: هیچ منبعی یافت نشد
     no_results: بدون نتیجه
-    no_rules_added: No rules added
+    no_rules_added: هیچ قانونی اضافه نشد
     no_shipping_methods_found:
     no_stock_locations_found:
     no_trackers_found:
@@ -770,7 +772,7 @@ fa:
     order_information:
     order_mailer:
       cancel_email:
-        dear_customer: Dear Customer,
+        dear_customer: مشتری گرامی،
         instructions: Your order has been CANCELED.  Please retain this cancellation information for your records.
         order_summary_canceled: Order Summary [CANCELED]
         subject: لغو سفارش
@@ -887,7 +889,7 @@ fa:
       match_policies:
         all:
         any:
-    promotion_rule:
+    promotion_rule: قانین فروش ویژه
     promotion_rule_types:
       first_order:
         description:
@@ -916,15 +918,15 @@ fa:
       user_logged_in:
         description: Available only to logged in users
         name: User Logged In
-    promotions: Promotions
-    properties: Properties
-    property: Property
-    prototype: نونه آزمایشی
+    promotions: فروش‌ های ویژه
+    properties: خواص
+    property: خاصیت
+    prototype: نمونه آزمایشی
     prototypes: نمونه های آزمایشی
     provider: فراهم آورنده
     provider_settings_warning: If you are changing the provider type, you must save first before you can edit the provider settings
     qty: تعداد
-    quantity:
+    quantity: تعداد
     quantity_returned: Quantity Returned
     quantity_shipped: Quantity Shipped
     rate: Rate
@@ -937,14 +939,14 @@ fa:
     register: به عنوان کاربر جدید ثبت نام کنید
     registration: ثبت نام
     remember_me: من را به یاد بسپار
-    remove: Remove
-    rename: Rename
+    remove: حذف
+    rename: تغییر نام
     reports: گزارشات
-    resend: Resend
+    resend: ارسال مجدد
     reset_password: ریست رمز عبور
     response_code: Response Code
     resume: ادامه
-    resumed: Resumed
+    resumed: ادامه
     return: برگشت
     return_authorization: Return Authorization
     return_authorization_updated: Return authorization updated
@@ -970,40 +972,40 @@ fa:
     say_yes: 'Yes'
     scope: Scope
     search: جستجو
-    search_results: Search results for '%{keywords}'
+    search_results: نتیجه جستجو برای کلید واژه '%{keywords}'
     searching: در حال جستجو
     secure_connection_type: نوع اتصال امن
-    security_settings: Security Settings
+    security_settings: تنظیمات امنیتی
     select: انتخاب
     select_from_prototype: از نمونه اولیه انتخاب کن
     select_stock:
-    send_copy_of_all_mails_to: Send Copy of All Mails To
-    send_mails_as: Send Mails As
+    send_copy_of_all_mails_to: یک کپی از تمام ایمیل ها بفرست به
+    send_mails_as: فرستادن ایمیل به عنوان
     server: سرور
     server_error: سرور با ایراد مواجه شد
     settings: تنظیمات
     ship: ارسال
-    ship_address: Ship Address
-    ship_total:
-    shipment:
-    shipment_inc_vat: Shipment including VAT
+    ship_address: آدرس پستی
+    ship_total: کل مرسوله
+    shipment: حمل
+    shipment_inc_vat: هزینه پست با احتساب مالیات بر ارزش افزوده
     shipment_mailer:
       shipped_email:
-        dear_customer: Dear Customer,
-        instructions: Your order has been shipped
-        shipment_summary: Shipment Summary
-        subject: Shipment Notification
-        thanks: Thank you for your business.
-        track_information: ! 'Tracking Information: %{tracking}'
+        dear_customer: مشتری عزیز,
+        instructions: مرسوله شما ارسال گردید.
+        shipment_summary: خلاضه وضعیت پست
+        subject: اطلاعات ارسال
+        thanks: بابت خرید از ما متشکریم.
+        track_information: ! 'اطلاعات پیگیری مرسوله: %{tracking}'
         track_link:
-    shipment_state: Shipment State
+    shipment_state: وضعیت مرسوله
     shipment_states:
       backorder: backorder
-      partial: partial
+      partial: جزئی
       pending: معلق
       ready: آماده
       shipped: ارسال شد
-    shipments: Shipments
+    shipments: مرسوله ها
     shipped: ارسال شد
     shipping: ارسال
     shipping_address: آدرس ارسال
@@ -1019,8 +1021,8 @@ fa:
     shop_by_taxonomy: خرید بر حسب %{taxonomy}
     shopping_cart: سبد خرید
     show: نمایش
-    show_active: Show Active
-    show_deleted: Show Deleted
+    show_active: نمایش فعال
+    show_deleted: نمایش حذف شده
     show_only_complete_orders: نمایش سفارشات تکمیل شده
     show_rate_in_label:
     site_name: نام سایت
@@ -1040,11 +1042,12 @@ fa:
     split:
     spree/order:
       coupon_code:
+      considered_riskyc: سنجش ریسک
     spree_gateway_error_flash_for_checkout: There was a problem with your payment information. Please check your information and try again.
     start: شروع
     start_date: Valid from
     state: ایالت یا استان
-    state_based: State Based
+    state_based: استان پایه
     states: ایالات یا استان ها
     states_required:
     status: وضعیت
@@ -1075,11 +1078,11 @@ fa:
     tax_rates: نرخ مالیات
     tax_settings: تنظیمات مالیات
     tax_total: کل مالیات
-    taxon: Taxon
-    taxon_edit: Edit Taxon
-    taxon_placeholder:
+    taxon: دسته
+    taxon_edit: ویرایش دسته
+    taxon_placeholder: جاینشین دسته
     taxonomies: طبقه بندی ها
-    taxonomy: Taxonomy
+    taxonomy: طبقه بندی
     taxonomy_edit: ویرایش طبقه بندی
     taxonomy_tree_error: The requested change has not been accepted and the tree has been returned to its previous state, please try again.
     taxonomy_tree_instruction: ! '* Right click a child in the tree to access the menu for adding, deleting or sorting a child.'
@@ -1087,9 +1090,9 @@ fa:
     test: تست
     test_mailer:
       test_email:
-        greeting: Congratulations!
-        message: If you have received this email, then your email settings are correct.
-        subject: Testmail
+        greeting: تبریک فراوان!
+        message: اگر شما این ایمیل را دریافت کرده اید بدین معنی می باشد که تنظیمات ایمیل شما درست بوده است.
+        subject: ایمیل آزمایشی
     test_mode: مد تست
     thank_you_for_your_order: با تشکر، لطفا یک کپی از این صفحه برای نگهداری در نزد خود، پرینت کنید
     there_are_no_items_for_this_order:
@@ -1098,9 +1101,9 @@ fa:
     time:
     to_add_variants_you_must_first_define: To add variants, you must first define
     total: کل
-    tracking: ردگیری
-    tracking_number:
-    tracking_url:
+    tracking: رهگیری
+    tracking_number: کد رهگیری
+    tracking_url: تارنما رهگیری
     tracking_url_placeholder:
     transfer_from_location:
     transfer_stock:
@@ -1143,8 +1146,8 @@ fa:
     year: سال
     you_have_no_orders_yet: شما هنوز سفارشی ثبت نکرده اید
     your_cart_is_empty: سبد خرید شما خالی است
-    your_order_is_empty_add_product:
+    your_order_is_empty_add_product: سفارش شما خالی است یک کحصول اضافه کنید
     zip: کد پستی
-    zipcode:
+    zipcode: کدپستی
     zone: ناحیه
     zones: ناحیه ها
