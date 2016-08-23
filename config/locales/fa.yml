@@ -54,6 +54,7 @@ fa:
         special_instructions: دستورالعمل ویژه
         state: وضعیت
         total: مجموع
+        considered_risky: سنجش ریسک
 
       spree/order/bill_address:
         address1: آدرس ۱
@@ -99,14 +100,14 @@ fa:
         name: نامه
         code: کد
       spree/property:
-        name: "نام"
-        presentation: "نمایش"
+        name: نام
+        presentation: نمایش
       spree/prototype:
-        name: "نام"
+        name: نام
       spree/return_authorization:
         amount:
       spree/role:
-        name: "نام"
+        name: نام
       spree/state:
         abbr: اختصاری
         name: "نام"
@@ -358,12 +359,20 @@ fa:
     admin:
       tab:
         configuration: تنظیمات
+        option_types: انواع انتخاب
         orders: سفارشات
         overview: نمای کلی
         products: محصولات
         promotions: فروش ویژه
+        properties: خواص
+        prototypes: نمونه های اولیه
+        promotions: فروش ویژه
+        promotion_categories: طبقه بندی های فروش ویژه
         reports: گزارشات
+        taxonomies: دسته بندی ها
+        taxons: دسته ها
         users: کاربران
+
     administration: مدیریت
     agree_to_privacy_policy:
     agree_to_terms_of_service:
@@ -758,7 +767,7 @@ fa:
     open_all_adjustments:
     option_type: نوع اختیار
     option_type_placeholder:
-    option_types: انواع اختیارات
+    option_types: انواع انتخاب
     option_value: مقدار
     option_values: مقادیر
     optional: اختیاری
@@ -777,7 +786,7 @@ fa:
         order_summary_canceled: Order Summary [CANCELED]
         subject: لغو سفارش
         subtotal:
-        total:
+        total: کل
       confirm_email:
         dear_customer: Dear Customer,
         instructions: Please review and retain the following order information for your records.
@@ -785,7 +794,7 @@ fa:
         subject: تایید سفارش
         subtotal:
         thanks: Thank you for your business.
-        total:
+        total: کل
     order_not_found:
     order_number: سفارش
     order_populator:
@@ -801,7 +810,7 @@ fa:
       confirm: تایید
       delivery: تحویل
       payment: پرداخت
-      resumed: resumed
+      resumed: از سرگیری
       returned: برگشت خورد
     order_summary: خلاصه سفارش
     order_sure_want_to:
@@ -812,13 +821,13 @@ fa:
     overview: مرور کلی
     package_from:
     pagination:
-      next_page: next page &raquo;
-      previous_page: ! '&laquo; previous page'
+      next_page: صفحه بعد &raquo;
+      previous_page: ! '&laquo; صفحه قبل'
       truncate: ! '&hellip;'
     password: رمز عبور
     paste: Paste
     path: Path
-    pay: pay
+    pay: پرداخت کردن
     payment: پرداخت
     payment_information: اطلاعات پرداخت
     payment_method: روش پرداخت
@@ -833,15 +842,15 @@ fa:
       checkout: تصفیه حساب
       completed: تکمیل شده
       credit_owed: credit owed
-      failed: failed
+      failed: عدم موفقیت
       paid: پرداخت شده
       pending: معلق
       processing: در حال پردازش
       void: void
     payment_updated: پرداخت بروز رسانی شد
     payments: پرداخت ها
-    percent:
-    percent_per_item: Percent Per Item
+    percent: درصد
+    percent_per_item: درصد بر اساس هر ایتم
     permalink: Permalink
     phone: تلفن
     place_order: انجام سفارش
@@ -974,6 +983,8 @@ fa:
     search: جستجو
     search_results: نتیجه جستجو برای کلید واژه '%{keywords}'
     searching: در حال جستجو
+    quick_search: جستجوی سریع
+    filter: فیلتر
     secure_connection_type: نوع اتصال امن
     security_settings: تنظیمات امنیتی
     select: انتخاب
@@ -1041,8 +1052,7 @@ fa:
     special_instructions: Special Instructions
     split:
     spree/order:
-      coupon_code:
-      considered_riskyc: سنجش ریسک
+      coupon_code: کد کوپن
     spree_gateway_error_flash_for_checkout: There was a problem with your payment information. Please check your information and try again.
     start: شروع
     start_date: Valid from
@@ -1151,3 +1161,4 @@ fa:
     zipcode: کدپستی
     zone: ناحیه
     zones: ناحیه ها
+    next: بعدی
