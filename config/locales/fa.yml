@@ -239,7 +239,7 @@ fa:
       spree/prototype:
         one: نمونه آزمایشی
         other: نمنونه های آزمایشی
-      spree/refund_reason:
+      spree/refund_reason: دلیل استرداد
       spree/reimbursement:
       spree/reimbursement_type:
       spree/return_authorization:
@@ -705,7 +705,7 @@ fa:
     maestro_or_solo_cards: Maestro/Solo cards
     mail_method_settings:
     mail_methods: متدهای نامه
-    make_refund: Make refund
+    make_refund: ایجاد استرداد
     master_price: قیمت اصلی
     match_choices:
       all: All
@@ -961,6 +961,7 @@ fa:
     received: دریافت شد
     reference:
     refund: Refund
+    refund_reasons: دلایل استرداد
     register: به عنوان کاربر جدید ثبت نام کنید
     registration: ثبت نام
     remember_me: من را به یاد بسپار
@@ -1079,14 +1080,14 @@ fa:
     status: وضعیت
     stock_location:
     stock_location_info:
-    stock_locations:
+    stock_locations: اماکن نبار
     stock_management:
     stock_management_requires_a_stock_location:
     stock_movements:
     stock_movements_for_stock_location:
     stock_successfully_transferred:
-    stock_transfer:
-    stock_transfers:
+    stock_transfer: جابجایی انبار
+    stock_transfers: جابجاهای انبار
     stop: توقف
     store: فروشگاه
     street_address: آدرس
