@@ -1,17 +1,18 @@
 fa:
+
   Bazaar: بازار
   activerecord:
     attributes:
       spree/address:
-        address1: "آدرس"
-        address2: "ادامه آدرس"
-        city: "شهر"
-        country: "کشور"
-        firstname: "نام"
-        lastname: "نام و نام خانوادگی"
-        phone: "تلفن"
-        state: "استان"
-        zipcode: "کدپستی"
+        address1: آدرس
+        address2: ادامه آدرس
+        city: شهر
+        country: کشور
+        firstname: نام
+        lastname: نام و نام خانوادگی
+        phone: تلفن
+        state: استان
+        zipcode: کدپستی
       spree/calculator/tiered_flat_rate:
         preferred_base_amount:
         preferred_tiers:
@@ -22,24 +23,29 @@ fa:
         iso: ISO
         iso3: ISO3
         iso_name: ISO Name
-        name: "نام"
+        name: نام
         numcode: ISO Code
       spree/credit_card:
-        base: "پایه"
-        cc_type: "نوع"
-        month: "ماه"
-        name: "نام"
-        number: "عدد"
+        base: پایه
+        cc_type: نوع
+        month: ماه
+        name: نام
+        number: عدد
+        number:
+          currency:
+            format:
+              format: "%u %n"
+              unit: sdd
         verification_value:
-        year: "سال"
+        year: سال
       spree/inventory_unit:
-        state: "استان"
+        state: استان
       spree/line_item:
-        price: "قیمت"
-        quantity: "مقدار"
+        price: قیمت
+        quantity: مقدار
       spree/option_type:
-        name: "نام"
-        presentation: "نمایش"
+        name: نام
+        presentation: نمایش
       spree/order:
         checkout_complete: بازدید نهایی
         completed_at: پایان یافته در
@@ -127,7 +133,7 @@ fa:
         seo_title: تیتر seo
         url: تارنما
       spree/tax_category:
-        description: "توضیحات"
+        description:   توضیحات
         name: نام
         spree/tax_rate: مقدار مالیات
         amount: مقدار
@@ -247,11 +253,14 @@ fa:
       spree/state:
         one: استان
         other: استان ها
-      spree/stock_location:
-
+      spree/stock_location: مکان انبار
       spree/stock_transfer: انتقال انبار
       spree/tax_category: دسته بندی مالیات
-      spree/tax_rate: مقدار مالیات
+      spree/tax_rate:
+        amount: Taxa
+        included_in_price: اضافه شده به قیمت
+        show_rate_in_label: نشان دادن نرخ در برچسب
+
       spree/taxon: طبقه
       spree/taxonomy:
         one: دسته بندی
@@ -350,15 +359,17 @@ fa:
     additional_item: قیمت آیتم اضافه شده
     address1: آدرس ۱ول
     address2:  آدرس دوم
-    adjustment: کاهش
-    adjustment_amount: کاهش مقدار
-    adjustment_successfully_closed: کاهش با موفقیت بسته شد
-    adjustment_successfully_opened: کاهش با موفقیت باز شد
+    adjustment: اصلاح
+    adjustment_amount: اصلاح مقدار
+    adjustment_successfully_closed: اصلاح با موفقیت بسته شد
+    adjustment_successfully_opened: اصلاح با موفقیت باز شد
     adjustment_total: تعدیل کل
     adjustments: تعدیلات
     admin:
       tab:
         configuration: تنظیمات
+        stock_locations: محل انبار
+        stock_transfers: انتقال انبار
         option_types: انواع انتخاب
         orders: سفارشات
         overview: نمای کلی
@@ -449,6 +460,7 @@ fa:
     card_number: شماره کارت
     card_type_is: نوع کارت
     cart: سبد خرید
+    cart_subtotal: مجموع خرید
     categories: دسته بندی ها
     category: دسته بندی
     check_for_spree_alerts:
@@ -560,7 +572,7 @@ fa:
     editing_zone: ویرایش ناحیه
     email: ایمیل
     empty: خالی
-    empty_cart: سبد خرید خالی شود
+    empty_cart: خالی کردن سبد خرید
     enable_mail_delivery: فعال سازی تحویل نامه
     end: پایان
     ending_in: Ending in
@@ -637,7 +649,11 @@ fa:
     image_settings_updated: Image Settings successfully updated.
     image_settings_warning: You will need to regenerate thumbnails if you update the paperclip styles. Use rake paperclip:refresh:thumbnails to do this.
     images: تصاویر
-    included_in_price: Included in Price
+    implement_eligible_for_return:
+    implement_requires_manual_intervention:
+    inactive:
+    incl:
+    included_in_price: اضافه شده به قیمت
     included_price_validation: cannot be selected unless you have set a Default Tax Zone
     instructions_to_reset_password: فرم زیر را کامل کنید، طریقه ایجاد رمز عبور جدید برای شما ایمیل خواهد شد
     insufficient_stock: Insufficient stock available, only %{on_hand} remaining
@@ -775,7 +791,7 @@ fa:
     or: یا
     or_over_price: ! '%{price} or over'
     order: سفارش
-    order_adjustments: Order adjustments
+    order_adjustments: اصلاحات سفارش
     order_details: جزئیات سفارش
     order_email_resent: Order Email Resent
     order_information:
@@ -786,7 +802,7 @@ fa:
         order_summary_canceled: Order Summary [CANCELED]
         subject: لغو سفارش
         subtotal:
-        total: کل
+        total: قیمت تمام شده
       confirm_email:
         dear_customer: Dear Customer,
         instructions: Please review and retain the following order information for your records.
@@ -794,7 +810,7 @@ fa:
         subject: تایید سفارش
         subtotal:
         thanks: Thank you for your business.
-        total: کل
+        total: قیمت تمام شده
     order_not_found:
     order_number: سفارش
     order_populator:
@@ -1110,7 +1126,7 @@ fa:
     thumbnail: Thumbnail
     time:
     to_add_variants_you_must_first_define: To add variants, you must first define
-    total: کل
+    total: قیمت تمام شده
     tracking: رهگیری
     tracking_number: کد رهگیری
     tracking_url: تارنما رهگیری
@@ -1118,7 +1134,7 @@ fa:
     transfer_from_location:
     transfer_stock:
     transfer_to_location:
-    tree: Tree
+    tree: درخت
     type: نوع
     type_to_search: Type to search
     unable_to_connect_to_gateway: اتصال به درگاه مقدور نیست
