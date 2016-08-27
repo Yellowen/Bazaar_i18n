@@ -837,9 +837,9 @@ fa:
     overview: مرور کلی
     package_from:
     pagination:
-      next_page: صفحه بعد &raquo;
-      previous_page: ! '&laquo; صفحه قبل'
-      truncate: ! '&hellip;'
+      next_page: صفحه بعد
+      previous_page:  صفحه قبل
+      truncate:
     password: رمز عبور
     paste: Paste
     path: Path
@@ -1178,4 +1178,3 @@ fa:
     zipcode: کدپستی
     zone: ناحیه
     zones: ناحیه ها
-    next: بعدی
