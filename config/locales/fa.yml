@@ -502,7 +502,7 @@ fa:
     coupon_code_not_eligible:
     coupon_code_not_found:
     create: ایجاد
-    create_a_new_account: ایجاد یک حساب جدید
+    create_a_new_account: ثبت نام و ایجاد حساب کاربری
     created_at: ایجاد شده در
     credit: اعتبار
     credit_card: کارت اعتباری
@@ -697,7 +697,7 @@ fa:
     logged_in_succesfully: ورود موفقیت آمیز بود
     logged_out: شما خارج شدید
     login: ورود
-    login_as_existing: Log In as Existing Customer
+    login_as_existing: اگر قبلا ثبت نام کرده اید وارد شوی
     login_failed: ورود شما موفقیت آمیز نبود
     login_name: ورود
     logout: خروج
@@ -789,7 +789,7 @@ fa:
     optional: اختیاری
     options: اختیارات
     or: یا
-    or_over_price: ! '%{price} or over'
+    or_over_price: ! '%{price} بالاتز از'
     order: سفارش
     order_adjustments: اصلاحات سفارش
     order_details: جزئیات سفارش
@@ -836,7 +836,7 @@ fa:
     out_of_stock: موجودی نداریم
     overview: مرور کلی
     package_from:
-    pagination:
+    paginaton:
       next_page: صفحه بعد
       previous_page:  صفحه قبل
       truncate:
@@ -876,7 +876,7 @@ fa:
     presentation: Presentation
     previous: قبلی
     price: قیمت
-    price_range: Price Range
+    price_range: حدود قیمت
     price_sack: Price Sack
     process: پردازش
     product: محصول
@@ -1139,7 +1139,7 @@ fa:
     type: نوع
     type_to_search: Type to search
     unable_to_connect_to_gateway: اتصال به درگاه مقدور نیست
-    under_price: Under %{price}
+    under_price: کمتر از %{price}
     unlock:
     unrecognized_card_type: نوع کارت ناشناخته
     unshippable_items:
