@@ -234,11 +234,11 @@ fa:
         other: سفارش
         spree/promotion: فروش ویژه
       spree/property:
-        one: "خصوصیت"
-        other: "خصوصیات"
+        one: "مشخصه"
+        other: "مشخصات"
       spree/prototype:
         one: نمونه آزمایشی
-        other: نمنونه های آزمایشی
+        other: نمونه های اولیه
       spree/refund_reason: دلیل استرداد
       spree/reimbursement:
       spree/reimbursement_type:
@@ -375,7 +375,7 @@ fa:
         overview: نمای کلی
         products: محصولات
         promotions: فروش ویژه
-        properties: خواص
+        properties: مشخصات
         prototypes: نمونه های اولیه
         promotions: فروش ویژه
         promotion_categories: طبقه بندی های فروش ویژه
@@ -517,7 +517,7 @@ fa:
     current_promotion_usage:
     customer: مشتری
     customer_details: جزئیات مشتری
-    customer_details_updated: مشخصات کاربر به روز رسانی شد.
+    customer_details_updated: مشخات کاربر به روز رسانی شد.
     customer_search: جستجوی مشتری
     cut: Cut
     dash:
