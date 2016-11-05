@@ -101,7 +101,7 @@ fa:
         name: "نام"
         path: "مسیر"
         starts_at: شروع می شود در
-        usage_limit: محدودیت استفاد
+        usage_limit: محدودیت استفاده
       spree/promotion_category:
         name: نامه
         code: کد
@@ -137,7 +137,7 @@ fa:
         name: نام
         spree/tax_rate: مقدار مالیات
         amount: مقدار
-        included_in_price: اضافه شده به قیمت
+        inclsuded_in_price: اضافه شده به قیمت
         show_rate_in_label:
       spree/taxon:
         name: نام
@@ -322,11 +322,13 @@ fa:
   spree:
     abbreviation: "مخفف"
     accept:
+    account: حساب کاربری
+    account_updated: به روز رسانی حساب کاربری
     acceptance_errors:
     acceptance_status:
     accepted:
-    account: "حساب"
-    account_updated: "حساب شما بروزرسانی شد!"
+    account: حساب کاربری
+    account_updated: حساب کاربری شما به روز رسانی شد!
     action: "حرکت"
     actions:
       cancel: لغو
@@ -383,6 +385,15 @@ fa:
         taxonomies: دسته بندی ها
         taxons: دسته ها
         users: کاربران
+      user:
+        account: حساب کاربری
+        addresses: آدرس
+        items: اقلام
+        items_purchased: اقلام خریداری شده
+        order_history: گذشته سفارشات
+        order_num: تعداد سفارشات
+        orders: سفارش ها
+        user_information: اظلاعات کاربر
 
     administration: مدیریت
     agree_to_privacy_policy:
@@ -406,6 +417,13 @@ fa:
     analytics_desc_list_4:
     analytics_trackers: ردگیرهای تحلیلی
     and: and
+    api:
+      access: دسترسی
+      key: کلید
+      no_key:
+      clear_key: پاک کردن کلید
+      generate_key: تولید کلید
+      regenerate_key: بازتولید کلید
     are_you_sure: آیا مطمئن هستید؟
     are_you_sure_delete: آیا مطمئن هستید که می خواهید این سطر را پاک کنید؟
     associated_adjustment_closed:
@@ -416,6 +434,7 @@ fa:
     attachment_url:
     authorization_failure: خرابی در صدور مجوز
     available_on: موجود است در
+    average_order_value: میانگین ارزش سفارشات
     back: برگشت
     back_end: Back End
     back_to_adjustments_list: Back To Adjustments List
@@ -473,7 +492,7 @@ fa:
     close:
     close_all_adjustments:
     code: کد
-    company:
+    company: شرکت
     complete: تکمیل
     configuration: پیکربندی
     configurations: پیکربندی ها
@@ -503,6 +522,7 @@ fa:
     coupon_code_not_found:
     create: ایجاد
     create_a_new_account: ثبت نام و ایجاد حساب کاربری
+    create_new_order: ایجاد سفارش جدید
     created_at: ایجاد شده در
     credit: اعتبار
     credit_card: کارت اعتباری
@@ -514,7 +534,7 @@ fa:
     currency_symbol_position: Put currency symbol before or after dollar amount?
     currency_thousands_separator:
     current: جاری
-    current_promotion_usage:
+    current_promotion_usage: فروش ویژه فعلی
     customer: مشتری
     customer_details: جزئیات مشتری
     customer_details_updated: مشخات کاربر به روز رسانی شد.
@@ -608,6 +628,7 @@ fa:
     fill_in_customer_info:
     filter_results: فیلتر کردن نتایج
     finalize: نهایی کردن
+    find_a_taxon: یک دسته را بیاب
     first_item: هزینه اولین آیتم
     first_name: نام
     first_name_begins_with: حرف آغازین نام
@@ -642,7 +663,7 @@ fa:
       show_only:
       supported_locales:
       this_file_language: فارسی(fa)
-      translations:
+      translations: ترجمه
     icon: آیکون
     image: تصویر
     image_settings: Image Settings
@@ -682,6 +703,7 @@ fa:
     last_name: نام خانوادگی
     last_name_begins_with: حرف آغازین نام خانوادگی
     learn_more: Learn More
+    lifetime_stats: آمار کلی
     list: لیست
     listing_countries:
     listing_orders: لیست کردن سفارش ها
@@ -711,6 +733,7 @@ fa:
       all: All
       none: None
     max_items: حداکثر اقلام
+    member_since: تاریخ عضویت۲
     meta_description: Meta Description
     meta_keywords: Meta Keywords
     metadata: Metadata
@@ -778,6 +801,7 @@ fa:
       product_not_deleted: نمی توان این محصول را حذف کرد
       variant_deleted: Variant has been deleted
       variant_not_deleted: Variant could not be deleted
+    num_orders: تعداد سفارشات
     on_hand: On Hand
     open:
     open_all_adjustments:
@@ -944,8 +968,8 @@ fa:
         description: Available only to logged in users
         name: User Logged In
     promotions: فروش‌ های ویژه
-    properties: خواص
-    property: خاصیت
+    properties: مشخصات
+    property: مشخصه
     prototype: نمونه آزمایشی
     prototypes: نمونه های آزمایشی
     provider: فراهم آورنده
@@ -983,7 +1007,7 @@ fa:
     rma_credit: RMA Credit
     rma_number: RMA Number
     rma_value: RMA Value
-    roles: Roles
+    roles: نقش
     rules: قوانین
     s3_access_key: Access Key
     s3_bucket: Bucket
@@ -992,7 +1016,7 @@ fa:
     s3_secret: Secret Key
     sales_total: کل فروش
     sales_total_description: کل فروش برای همه سفارش ها
-    sales_totals:
+    sales_totals: کل فروش
     save_and_continue: ذخیره و ادامه
     say_no: 'No'
     say_yes: 'Yes'
@@ -1112,8 +1136,8 @@ fa:
     taxonomy: طبقه بندی
     taxonomy_edit: ویرایش طبقه بندی
     taxonomy_tree_error: The requested change has not been accepted and the tree has been returned to its previous state, please try again.
-    taxonomy_tree_instruction: ! '* Right click a child in the tree to access the menu for adding, deleting or sorting a child.'
-    taxons: Taxons
+    taxonomy_tree_instruction: ! '* بر روی یک زیرشاحه راست کلیک کنید تا بتوانید ویرایش،حذف ویا زیر شاخه ای دیگر اضافه کنید.'
+    taxons: دسته ها
     test: تست
     test_mailer:
       test_email:
@@ -1128,6 +1152,10 @@ fa:
     time:
     to_add_variants_you_must_first_define: To add variants, you must first define
     total: قیمت تمام شده
+    total_per_item:
+    total_pre_tax_refund:
+    total_price:
+    total_sales: کل فروش
     tracking: رهگیری
     tracking_number: کد رهگیری
     tracking_url: تارنما رهگیری
