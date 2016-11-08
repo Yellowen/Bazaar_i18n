@@ -484,10 +484,14 @@ fa:
     category: دسته بندی
     check_for_spree_alerts:
     checkout: تصفیه حساب
-    choose_a_customer:
-    choose_currency:
+    choose_a_customer: انتخاب یک مشتری
+    choose_currency: انتخاب ارز
     choose_dashboard_locale:
     city: شهر
+    clear_cache: خالی کردن cache
+    clear_cache_ok:
+    clear_cache_warning: هشدار خالی کردن cache
+    click_and_drag_on_the_products_to_sort_them:
     clone: Clone
     close:
     close_all_adjustments:
@@ -653,15 +657,15 @@ fa:
     hide_cents:
     home: صفحه اصلی
     i18n:
-      available_locales:
+      available_locales: زبان‌های موجود
       fields:
       language:
-      localization_settings:
+      localization_settings: تنظیمات بومی سازی
       only_complete:
       only_incomplete:
       select_locale:
       show_only:
-      supported_locales:
+      supported_locales: پشتیبانی از زبان‌های
       this_file_language: فارسی(fa)
       translations: ترجمه
     icon: آیکون
@@ -988,6 +992,27 @@ fa:
     refund_reasons: دلایل استرداد
     register: به عنوان کاربر جدید ثبت نام کنید
     registration: ثبت نام
+    reimburse:
+    reimbursed:
+    reimbursement:
+    reimbursement_mailer:
+      reimbursement_email:
+        days_to_send:
+        dear_customer:
+        exchange_summary:
+        for:
+        instructions:
+        refund_summary:
+        subject:
+        total_refunded:
+    reimbursement_perform_failed:
+    reimbursement_status:
+    reimbursement_type:
+    reimbursement_type_override:
+    reimbursement_types: انواع بازپرداخت
+    reimbursements:
+    reject:
+    rejected:
     remember_me: من را به یاد بسپار
     remove: حذف
     rename: تغییر نام
@@ -998,9 +1023,10 @@ fa:
     resume: ادامه
     resumed: ادامه
     return: برگشت
-    return_authorization: Return Authorization
-    return_authorization_updated: Return authorization updated
-    return_authorizations: Return Authorizations
+    return_authorization: مجوز استرداد
+    return_authorization_reasons: دلیل مجوز استرداد
+    return_authorization_updated: به روز رسانی مجوز استرداد
+    return_authorizations: مجوزهای استرداد
     return_quantity: Return Quantity
     returned: برگشت داده شد
     review: Review
