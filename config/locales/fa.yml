@@ -250,6 +250,8 @@ fa:
         one: دسته بندی ارسال
         other: دسته بندی های ارسال
       spree/shipping_method:
+        one: روش ارسال
+        other: روش ارسال
       spree/state:
         one: استان
         other: استان ها
@@ -482,7 +484,7 @@ fa:
     cart_subtotal: مجموع خرید
     categories: دسته بندی ها
     category: دسته بندی
-    check_for_spree_alerts:
+    check_for_spree_alerts: نمایش هشدار‌های سیستم
     checkout: تصفیه حساب
     choose_a_customer: انتخاب یک مشتری
     choose_currency: انتخاب ارز
@@ -1089,8 +1091,8 @@ fa:
     shipping_address: آدرس ارسال
     shipping_categories: دسته بندی های ارسال
     shipping_category: دسته بندی ارسال
-    shipping_flat_rate_per_item:
-    shipping_flat_rate_per_order:
+    shipping_flat_rate_per_item: نرخ ثابت ارسال برای هر کالا
+    shipping_flat_rate_per_order: نرخ ثابت
     shipping_flexible_rate:
     shipping_instructions: دستورالعمل های ارسال
     shipping_method: روش ارسال
